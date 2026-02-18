@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" thread-count="1" parallel="tests">
+
+  <test name="chromeTest">
+  <parameter name="browser" value="chrome" />
+    <classes>
+    	<class name="project.AppliedPolicyHolders"/>
+      	<class name="project.ApprovedPolicyHolders"/>
+    </classes>
+  </test>
+  
+  <test name="edgeTest">
+  <parameter name="browser" value="edge" />
+    <classes>
+    	<class name="project.AppliedPolicyHolders"/>
+      	<class name="project.ApprovedPolicyHolders"/>
+    </classes>
+  </test>
+  
+</suite> <!-- Suite -->

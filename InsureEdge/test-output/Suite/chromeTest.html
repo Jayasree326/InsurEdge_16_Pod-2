@@ -1,0 +1,764 @@
+<html>
+<head>
+<title>TestNG:  chromeTest</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>chromeTest</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>34/12/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Feb 17 17:33:31 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>97 seconds (97026 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.wasim.major_project.ApprovedPolicyHolders.Next_Button_UI_Validation()'><b>Next_Button_UI_Validation</b><br>Test class: com.wasim.major_project.ApprovedPolicyHolders</td>
+<td><div><pre>java.lang.AssertionError: Next button is NOT present on the page. expected [true] but found [false]
+	at com.wasim.major_project.ApprovedPolicyHolders.Next_Button_UI_Validation(ApprovedPolicyHolders.java:250)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace396736326", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace396736326'><pre>java.lang.AssertionError: Next button is NOT present on the page. expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.wasim.major_project.ApprovedPolicyHolders.Next_Button_UI_Validation(ApprovedPolicyHolders.java:250)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+</pre></div></td>
+<td>0</td>
+<td>com.wasim.major_project.ApprovedPolicyHolders@49e53c76</td></tr>
+<tr>
+<td title='com.wasim.major_project.AppliedPolicyHolders.Previous_Button_UI_Validation()'><b>Previous_Button_UI_Validation</b><br>Test class: com.wasim.major_project.AppliedPolicyHolders</td>
+<td><div><pre>java.lang.AssertionError: Previous button is NOT present on the page. expected [true] but found [false]
+	at com.wasim.major_project.AppliedPolicyHolders.Previous_Button_UI_Validation(AppliedPolicyHolders.java:211)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace498532447", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace498532447'><pre>java.lang.AssertionError: Previous button is NOT present on the page. expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.wasim.major_project.AppliedPolicyHolders.Previous_Button_UI_Validation(AppliedPolicyHolders.java:211)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+</pre></div></td>
+<td>0</td>
+<td>com.wasim.major_project.AppliedPolicyHolders@f6efaab</td></tr>
+<tr>
+<td title='com.wasim.major_project.AppliedPolicyHolders.Next_Button_Functionality_Validation()'><b>Next_Button_Functionality_Validation</b><br>Test class: com.wasim.major_project.AppliedPolicyHolders</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	expected [NEXT] but found [...]
+	at com.wasim.major_project.AppliedPolicyHolders.Next_Button_Functionality_Validation(AppliedPolicyHolders.java:610)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace503727053", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace503727053'><pre>java.lang.AssertionError: The following asserts failed:
+	expected [NEXT] but found [...]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at com.wasim.major_project.AppliedPolicyHolders.Next_Button_Functionality_Validation(AppliedPolicyHolders.java:610)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+</pre></div></td>
+<td>0</td>
+<td>com.wasim.major_project.AppliedPolicyHolders@f6efaab</td></tr>
+<tr>
+<td title='com.wasim.major_project.AppliedPolicyHolders.Next_Button_UI_Validation()'><b>Next_Button_UI_Validation</b><br>Test class: com.wasim.major_project.AppliedPolicyHolders</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	expected [NEXT] but found [...]
+	at com.wasim.major_project.AppliedPolicyHolders.Next_Button_UI_Validation(AppliedPolicyHolders.java:242)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace390310316", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace390310316'><pre>java.lang.AssertionError: The following asserts failed:
+	expected [NEXT] but found [...]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at com.wasim.major_project.AppliedPolicyHolders.Next_Button_UI_Validation(AppliedPolicyHolders.java:242)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+</pre></div></td>
+<td>0</td>
+<td>com.wasim.major_project.AppliedPolicyHolders@f6efaab</td></tr>
+<tr>
+<td title='com.wasim.major_project.AppliedPolicyHolders.ok_Alert_Of_DeleteButton_validation()'><b>ok_Alert_Of_DeleteButton_validation</b><br>Test class: com.wasim.major_project.AppliedPolicyHolders</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	expected [false] but found [true]
+	at com.wasim.major_project.AppliedPolicyHolders.ok_Alert_Of_DeleteButton_validation(AppliedPolicyHolders.java:518)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1358122531", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1358122531'><pre>java.lang.AssertionError: The following asserts failed:
+	expected [false] but found [true]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at com.wasim.major_project.AppliedPolicyHolders.ok_Alert_Of_DeleteButton_validation(AppliedPolicyHolders.java:518)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+</pre></div></td>
+<td>4</td>
+<td>com.wasim.major_project.AppliedPolicyHolders@f6efaab</td></tr>
+<tr>
+<td title='com.wasim.major_project.ApprovedPolicyHolders.ResetButtonFunctionalityValidation()'><b>ResetButtonFunctionalityValidation</b><br>Test class: com.wasim.major_project.ApprovedPolicyHolders</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//label[normalize-space()=&apos;Policy Status&apos;]/ancestor::*[self::div or self::td][1]//span[contains(@class,&apos;select2-selection&apos;)]&quot;}
+  (Session info: chrome=142.0.7444.176)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;24.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [be2919535464639c68d18e07c6e723ef, findElement {using=xpath, value=//label[normalize-space()=&apos;Policy Status&apos;]/ancestor::*[self::div or self::td][1]//span[contains(@class,&apos;select2-selection&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\2461439\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49677}, goog:processID: 26660, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49677/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: be2919535464639c68d18e07c6e723ef
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:384)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:378)
+	at com.wasim.major_project.ApprovedPolicyHolders.lambda$3(ApprovedPolicyHolders.java:434)
+	at com.wasim.major_project.ApprovedPolicyHolders.ResetButtonFunctionalityValidation(ApprovedPolicyHolders.java:474)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1172295118", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1172295118'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//label[normalize-space()=&apos;Policy Status&apos;]/ancestor::*[self::div or self::td][1]//span[contains(@class,&apos;select2-selection&apos;)]&quot;}
+  (Session info: chrome=142.0.7444.176)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;24.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [be2919535464639c68d18e07c6e723ef, findElement {using=xpath, value=//label[normalize-space()=&apos;Policy Status&apos;]/ancestor::*[self::div or self::td][1]//span[contains(@class,&apos;select2-selection&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\2461439\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49677}, goog:processID: 26660, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49677/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: be2919535464639c68d18e07c6e723ef
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:384)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:378)
+	at com.wasim.major_project.ApprovedPolicyHolders.lambda$3(ApprovedPolicyHolders.java:434)
+	at com.wasim.major_project.ApprovedPolicyHolders.ResetButtonFunctionalityValidation(ApprovedPolicyHolders.java:474)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+</pre></div></td>
+<td>1</td>
+<td>com.wasim.major_project.ApprovedPolicyHolders@49e53c76</td></tr>
+<tr>
+<td title='com.wasim.major_project.AppliedPolicyHolders.validateBreadcrumbUI()'><b>validateBreadcrumbUI</b><br>Test class: com.wasim.major_project.AppliedPolicyHolders</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	Breadcrumb root mismatch expected [Dashboard] but found [Policy Holders],
+	Breadcrumb leaf mismatch expected [Applied Policy Holders] but found [View]
+	at com.wasim.major_project.AppliedPolicyHolders.validateBreadcrumbUI(AppliedPolicyHolders.java:52)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace111492438", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace111492438'><pre>java.lang.AssertionError: The following asserts failed:
+	Breadcrumb root mismatch expected [Dashboard] but found [Policy Holders],
+	Breadcrumb leaf mismatch expected [Applied Policy Holders] but found [View]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at com.wasim.major_project.AppliedPolicyHolders.validateBreadcrumbUI(AppliedPolicyHolders.java:52)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+</pre></div></td>
+<td>0</td>
+<td>com.wasim.major_project.AppliedPolicyHolders@f6efaab</td></tr>
+<tr>
+<td title='com.wasim.major_project.ApprovedPolicyHolders.Previous_Button_UI_Validation()'><b>Previous_Button_UI_Validation</b><br>Test class: com.wasim.major_project.ApprovedPolicyHolders</td>
+<td><div><pre>java.lang.AssertionError: Previous button is NOT present on the page. expected [true] but found [false]
+	at com.wasim.major_project.ApprovedPolicyHolders.Previous_Button_UI_Validation(ApprovedPolicyHolders.java:234)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace478732798", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace478732798'><pre>java.lang.AssertionError: Previous button is NOT present on the page. expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.wasim.major_project.ApprovedPolicyHolders.Previous_Button_UI_Validation(ApprovedPolicyHolders.java:234)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+</pre></div></td>
+<td>0</td>
+<td>com.wasim.major_project.ApprovedPolicyHolders@49e53c76</td></tr>
+<tr>
+<td title='com.wasim.major_project.AppliedPolicyHolders.Previous_Button_Functionality_Validation()'><b>Previous_Button_Functionality_Validation</b><br>Test class: com.wasim.major_project.AppliedPolicyHolders</td>
+<td><div><pre>java.lang.AssertionError: Previous button is NOT present on the page. expected [true] but found [false]
+	at com.wasim.major_project.AppliedPolicyHolders.Previous_Button_Functionality_Validation(AppliedPolicyHolders.java:579)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1622273129", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1622273129'><pre>java.lang.AssertionError: Previous button is NOT present on the page. expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.wasim.major_project.AppliedPolicyHolders.Previous_Button_Functionality_Validation(AppliedPolicyHolders.java:579)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+</pre></div></td>
+<td>0</td>
+<td>com.wasim.major_project.AppliedPolicyHolders@f6efaab</td></tr>
+<tr>
+<td title='com.wasim.major_project.ApprovedPolicyHolders.Previous_Button_Functionality_Validation()'><b>Previous_Button_Functionality_Validation</b><br>Test class: com.wasim.major_project.ApprovedPolicyHolders</td>
+<td><div><pre>java.lang.AssertionError: Previous button is NOT present on the page. expected [true] but found [false]
+	at com.wasim.major_project.ApprovedPolicyHolders.Previous_Button_Functionality_Validation(ApprovedPolicyHolders.java:535)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace344468624", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace344468624'><pre>java.lang.AssertionError: Previous button is NOT present on the page. expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.wasim.major_project.ApprovedPolicyHolders.Previous_Button_Functionality_Validation(ApprovedPolicyHolders.java:535)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+</pre></div></td>
+<td>0</td>
+<td>com.wasim.major_project.ApprovedPolicyHolders@49e53c76</td></tr>
+<tr>
+<td title='com.wasim.major_project.ApprovedPolicyHolders.Next_Button_Functionality_Validation()'><b>Next_Button_Functionality_Validation</b><br>Test class: com.wasim.major_project.ApprovedPolicyHolders</td>
+<td><div><pre>java.lang.AssertionError: Previous button is NOT present on the page. expected [true] but found [false]
+	at com.wasim.major_project.ApprovedPolicyHolders.Next_Button_Functionality_Validation(ApprovedPolicyHolders.java:551)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace80566676", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace80566676'><pre>java.lang.AssertionError: Previous button is NOT present on the page. expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.wasim.major_project.ApprovedPolicyHolders.Next_Button_Functionality_Validation(ApprovedPolicyHolders.java:551)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+</pre></div></td>
+<td>0</td>
+<td>com.wasim.major_project.ApprovedPolicyHolders@49e53c76</td></tr>
+<tr>
+<td title='com.wasim.major_project.AppliedPolicyHolders.validateHeaderandBreadcrumbFunctionality()'><b>validateHeaderandBreadcrumbFunctionality</b><br>Test class: com.wasim.major_project.AppliedPolicyHolders</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	Breadcrumb root mismatch expected [Dashboard] but found [Policy Holders],
+	Dashboard page is not loaded succesfully expected [Dashboard] but found [Policy Holders]
+	at com.wasim.major_project.AppliedPolicyHolders.validateHeaderandBreadcrumbFunctionality(AppliedPolicyHolders.java:270)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2109927773", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2109927773'><pre>java.lang.AssertionError: The following asserts failed:
+	Breadcrumb root mismatch expected [Dashboard] but found [Policy Holders],
+	Dashboard page is not loaded succesfully expected [Dashboard] but found [Policy Holders]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at com.wasim.major_project.AppliedPolicyHolders.validateHeaderandBreadcrumbFunctionality(AppliedPolicyHolders.java:270)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+</pre></div></td>
+<td>0</td>
+<td>com.wasim.major_project.AppliedPolicyHolders@f6efaab</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.wasim.major_project.AppliedPolicyHolders.Policy_Status_Filter_UI_Validation()'><b>Policy_Status_Filter_UI_Validation</b><br>Test class: com.wasim.major_project.AppliedPolicyHolders</td>
+<td></td>
+<td>1</td>
+<td>com.wasim.major_project.AppliedPolicyHolders@f6efaab</td></tr>
+<tr>
+<td title='com.wasim.major_project.AppliedPolicyHolders.ScrollUpbuttonFunctionalityValidation()'><b>ScrollUpbuttonFunctionalityValidation</b><br>Test class: com.wasim.major_project.AppliedPolicyHolders</td>
+<td></td>
+<td>1</td>
+<td>com.wasim.major_project.AppliedPolicyHolders@f6efaab</td></tr>
+<tr>
+<td title='com.wasim.major_project.AppliedPolicyHolders.validateCustomerNameDropdownFunctionality()'><b>validateCustomerNameDropdownFunctionality</b><br>Test class: com.wasim.major_project.AppliedPolicyHolders</td>
+<td></td>
+<td>0</td>
+<td>com.wasim.major_project.AppliedPolicyHolders@f6efaab</td></tr>
+<tr>
+<td title='com.wasim.major_project.ApprovedPolicyHolders.vaidateSubCategoryDropdownFunctionality()'><b>vaidateSubCategoryDropdownFunctionality</b><br>Test class: com.wasim.major_project.ApprovedPolicyHolders</td>
+<td></td>
+<td>0</td>
+<td>com.wasim.major_project.ApprovedPolicyHolders@49e53c76</td></tr>
+<tr>
+<td title='com.wasim.major_project.AppliedPolicyHolders.ResetButtonFunctionalityValidation()'><b>ResetButtonFunctionalityValidation</b><br>Test class: com.wasim.major_project.AppliedPolicyHolders</td>
+<td></td>
+<td>2</td>
+<td>com.wasim.major_project.AppliedPolicyHolders@f6efaab</td></tr>
+<tr>
+<td title='com.wasim.major_project.AppliedPolicyHolders.paginationNumberValidationUI()'><b>paginationNumberValidationUI</b><br>Test class: com.wasim.major_project.AppliedPolicyHolders</td>
+<td></td>
+<td>0</td>
+<td>com.wasim.major_project.AppliedPolicyHolders@f6efaab</td></tr>
+<tr>
+<td title='com.wasim.major_project.ApprovedPolicyHolders.paginationNumberValidationFunctionality()'><b>paginationNumberValidationFunctionality</b><br>Test class: com.wasim.major_project.ApprovedPolicyHolders</td>
+<td></td>
+<td>0</td>
+<td>com.wasim.major_project.ApprovedPolicyHolders@49e53c76</td></tr>
+<tr>
+<td title='com.wasim.major_project.AppliedPolicyHolders.validateTableHeadersUI()'><b>validateTableHeadersUI</b><br>Test class: com.wasim.major_project.AppliedPolicyHolders</td>
+<td></td>
+<td>0</td>
+<td>com.wasim.major_project.AppliedPolicyHolders@f6efaab</td></tr>
+<tr>
+<td title='com.wasim.major_project.AppliedPolicyHolders.searchButtonUi()'><b>searchButtonUi</b><br>Test class: com.wasim.major_project.AppliedPolicyHolders</td>
+<td></td>
+<td>0</td>
+<td>com.wasim.major_project.AppliedPolicyHolders@f6efaab</td></tr>
+<tr>
+<td title='com.wasim.major_project.ApprovedPolicyHolders.validateTableHeadersUI()'><b>validateTableHeadersUI</b><br>Test class: com.wasim.major_project.ApprovedPolicyHolders</td>
+<td></td>
+<td>0</td>
+<td>com.wasim.major_project.ApprovedPolicyHolders@49e53c76</td></tr>
+<tr>
+<td title='com.wasim.major_project.AppliedPolicyHolders.Policy_Status_Filter_Functionality_Validation()'><b>Policy_Status_Filter_Functionality_Validation</b><br>Test class: com.wasim.major_project.AppliedPolicyHolders</td>
+<td></td>
+<td>1</td>
+<td>com.wasim.major_project.AppliedPolicyHolders@f6efaab</td></tr>
+<tr>
+<td title='com.wasim.major_project.ApprovedPolicyHolders.validateBreadcrumbUI()'><b>validateBreadcrumbUI</b><br>Test class: com.wasim.major_project.ApprovedPolicyHolders</td>
+<td></td>
+<td>0</td>
+<td>com.wasim.major_project.ApprovedPolicyHolders@49e53c76</td></tr>
+<tr>
+<td title='com.wasim.major_project.ApprovedPolicyHolders.validateSubCategoryDropdownUI()'><b>validateSubCategoryDropdownUI</b><br>Test class: com.wasim.major_project.ApprovedPolicyHolders</td>
+<td></td>
+<td>0</td>
+<td>com.wasim.major_project.ApprovedPolicyHolders@49e53c76</td></tr>
+<tr>
+<td title='com.wasim.major_project.AppliedPolicyHolders.trashIconAlertUI()'><b>trashIconAlertUI</b><br>Test class: com.wasim.major_project.AppliedPolicyHolders</td>
+<td></td>
+<td>0</td>
+<td>com.wasim.major_project.AppliedPolicyHolders@f6efaab</td></tr>
+<tr>
+<td title='com.wasim.major_project.AppliedPolicyHolders.trashIconAlertFunctionality()'><b>trashIconAlertFunctionality</b><br>Test class: com.wasim.major_project.AppliedPolicyHolders</td>
+<td></td>
+<td>0</td>
+<td>com.wasim.major_project.AppliedPolicyHolders@f6efaab</td></tr>
+<tr>
+<td title='com.wasim.major_project.ApprovedPolicyHolders.ScrollUpbuttonFunctionalityValidation()'><b>ScrollUpbuttonFunctionalityValidation</b><br>Test class: com.wasim.major_project.ApprovedPolicyHolders</td>
+<td></td>
+<td>1</td>
+<td>com.wasim.major_project.ApprovedPolicyHolders@49e53c76</td></tr>
+<tr>
+<td title='com.wasim.major_project.ApprovedPolicyHolders.Search_Button_Functionality_Validation()'><b>Search_Button_Functionality_Validation</b><br>Test class: com.wasim.major_project.ApprovedPolicyHolders</td>
+<td></td>
+<td>1</td>
+<td>com.wasim.major_project.ApprovedPolicyHolders@49e53c76</td></tr>
+<tr>
+<td title='com.wasim.major_project.ApprovedPolicyHolders.searchButtonUi()'><b>searchButtonUi</b><br>Test class: com.wasim.major_project.ApprovedPolicyHolders</td>
+<td></td>
+<td>0</td>
+<td>com.wasim.major_project.ApprovedPolicyHolders@49e53c76</td></tr>
+<tr>
+<td title='com.wasim.major_project.ApprovedPolicyHolders.Policy_Status_Filter_UI_Validation()'><b>Policy_Status_Filter_UI_Validation</b><br>Test class: com.wasim.major_project.ApprovedPolicyHolders</td>
+<td></td>
+<td>1</td>
+<td>com.wasim.major_project.ApprovedPolicyHolders@49e53c76</td></tr>
+<tr>
+<td title='com.wasim.major_project.ApprovedPolicyHolders.resetButtonUi()'><b>resetButtonUi</b><br>Test class: com.wasim.major_project.ApprovedPolicyHolders</td>
+<td></td>
+<td>0</td>
+<td>com.wasim.major_project.ApprovedPolicyHolders@49e53c76</td></tr>
+<tr>
+<td title='com.wasim.major_project.ApprovedPolicyHolders.validatePageHeaderUi()'><b>validatePageHeaderUi</b><br>Test class: com.wasim.major_project.ApprovedPolicyHolders</td>
+<td></td>
+<td>0</td>
+<td>com.wasim.major_project.ApprovedPolicyHolders@49e53c76</td></tr>
+<tr>
+<td title='com.wasim.major_project.AppliedPolicyHolders.paginationNumberValidationFunctionality()'><b>paginationNumberValidationFunctionality</b><br>Test class: com.wasim.major_project.AppliedPolicyHolders</td>
+<td></td>
+<td>0</td>
+<td>com.wasim.major_project.AppliedPolicyHolders@f6efaab</td></tr>
+<tr>
+<td title='com.wasim.major_project.ApprovedPolicyHolders.validateCustomerNameDropdownUI()'><b>validateCustomerNameDropdownUI</b><br>Test class: com.wasim.major_project.ApprovedPolicyHolders</td>
+<td></td>
+<td>0</td>
+<td>com.wasim.major_project.ApprovedPolicyHolders@49e53c76</td></tr>
+<tr>
+<td title='com.wasim.major_project.ApprovedPolicyHolders.validatePolicyNameDropdownFunctionality()'><b>validatePolicyNameDropdownFunctionality</b><br>Test class: com.wasim.major_project.ApprovedPolicyHolders</td>
+<td></td>
+<td>0</td>
+<td>com.wasim.major_project.ApprovedPolicyHolders@49e53c76</td></tr>
+<tr>
+<td title='com.wasim.major_project.AppliedPolicyHolders.validatePageHeaderUi()'><b>validatePageHeaderUi</b><br>Test class: com.wasim.major_project.AppliedPolicyHolders</td>
+<td></td>
+<td>0</td>
+<td>com.wasim.major_project.AppliedPolicyHolders@f6efaab</td></tr>
+<tr>
+<td title='com.wasim.major_project.AppliedPolicyHolders.validateCustomerNameDropdownUI()'><b>validateCustomerNameDropdownUI</b><br>Test class: com.wasim.major_project.AppliedPolicyHolders</td>
+<td></td>
+<td>0</td>
+<td>com.wasim.major_project.AppliedPolicyHolders@f6efaab</td></tr>
+<tr>
+<td title='com.wasim.major_project.AppliedPolicyHolders.scrollUpButtonUI()'><b>scrollUpButtonUI</b><br>Test class: com.wasim.major_project.AppliedPolicyHolders</td>
+<td></td>
+<td>0</td>
+<td>com.wasim.major_project.AppliedPolicyHolders@f6efaab</td></tr>
+<tr>
+<td title='com.wasim.major_project.ApprovedPolicyHolders.validateCustomerNameDropdownFunctionality()'><b>validateCustomerNameDropdownFunctionality</b><br>Test class: com.wasim.major_project.ApprovedPolicyHolders</td>
+<td></td>
+<td>0</td>
+<td>com.wasim.major_project.ApprovedPolicyHolders@49e53c76</td></tr>
+<tr>
+<td title='com.wasim.major_project.AppliedPolicyHolders.Search_Button_Functionality_Validation()'><b>Search_Button_Functionality_Validation</b><br>Test class: com.wasim.major_project.AppliedPolicyHolders</td>
+<td></td>
+<td>0</td>
+<td>com.wasim.major_project.AppliedPolicyHolders@f6efaab</td></tr>
+<tr>
+<td title='com.wasim.major_project.ApprovedPolicyHolders.paginationNumberValidationUI()'><b>paginationNumberValidationUI</b><br>Test class: com.wasim.major_project.ApprovedPolicyHolders</td>
+<td></td>
+<td>0</td>
+<td>com.wasim.major_project.ApprovedPolicyHolders@49e53c76</td></tr>
+<tr>
+<td title='com.wasim.major_project.ApprovedPolicyHolders.validateHeaderandBreadcrumbFunctionality()'><b>validateHeaderandBreadcrumbFunctionality</b><br>Test class: com.wasim.major_project.ApprovedPolicyHolders</td>
+<td></td>
+<td>0</td>
+<td>com.wasim.major_project.ApprovedPolicyHolders@49e53c76</td></tr>
+<tr>
+<td title='com.wasim.major_project.AppliedPolicyHolders.cancel_Alert_Of_DeleteButton_validation()'><b>cancel_Alert_Of_DeleteButton_validation</b><br>Test class: com.wasim.major_project.AppliedPolicyHolders</td>
+<td></td>
+<td>4</td>
+<td>com.wasim.major_project.AppliedPolicyHolders@f6efaab</td></tr>
+<tr>
+<td title='com.wasim.major_project.AppliedPolicyHolders.resetButtonUi()'><b>resetButtonUi</b><br>Test class: com.wasim.major_project.AppliedPolicyHolders</td>
+<td></td>
+<td>0</td>
+<td>com.wasim.major_project.AppliedPolicyHolders@f6efaab</td></tr>
+<tr>
+<td title='com.wasim.major_project.ApprovedPolicyHolders.scrollUpButtonUI()'><b>scrollUpButtonUI</b><br>Test class: com.wasim.major_project.ApprovedPolicyHolders</td>
+<td></td>
+<td>0</td>
+<td>com.wasim.major_project.ApprovedPolicyHolders@49e53c76</td></tr>
+</table><p>
+</body>
+</html>
