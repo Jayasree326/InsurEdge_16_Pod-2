@@ -8,10 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Parameters;
+import org.testng.annotations.*;
 
 public class BaseTest {
     protected WebDriver driver;
@@ -19,7 +16,7 @@ public class BaseTest {
     
     @Parameters("browser")
     @BeforeClass
-    public void setUp(String browser) {
+    public void setUp(@Optional("chrome") String browser) {
     	if (browser.equalsIgnoreCase("chrome")) {
             driver = new ChromeDriver();
         } else if (browser.equalsIgnoreCase("edge")) {
@@ -41,7 +38,7 @@ public class BaseTest {
         // wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("some-dashboard-selector")));
     }
 
-    @AfterTest
+    @AfterClass
     public void tearDown() {
         driver.quit();
     }

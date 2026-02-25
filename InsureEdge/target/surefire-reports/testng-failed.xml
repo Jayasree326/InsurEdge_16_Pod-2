@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Surefire suite]" verbose="0">
+  <test thread-count="5" name="Surefire test(failed)" verbose="0">
+    <classes>
+      <class name="project.ApprovedPolicyHolders">
+        <methods>
+          <include name="Previous_Button_UI_Validation"/>
+          <include name="Previous_Button_Functionality_Validation"/>
+          <include name="Next_Button_Functionality_Validation"/>
+          <include name="navigateToAppliedPolicyHolders"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="Next_Button_UI_Validation"/>
+        </methods>
+      </class> <!-- project.ApprovedPolicyHolders -->
+      <class name="project.AppliedPolicyHolders">
+        <methods>
+          <include name="Previous_Button_UI_Validation"/>
+          <include name="Previous_Button_Functionality_Validation"/>
+          <include name="validateHeaderandBreadcrumbFunctionality"/>
+          <include name="Next_Button_Functionality_Validation"/>
+          <include name="navigateToAppliedPolicyHolders"/>
+          <include name="validateBreadcrumbUI"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="Next_Button_UI_Validation"/>
+        </methods>
+      </class> <!-- project.AppliedPolicyHolders -->
+    </classes>
+  </test> <!-- Surefire test(failed) -->
+</suite> <!-- Failed suite [Surefire suite] -->

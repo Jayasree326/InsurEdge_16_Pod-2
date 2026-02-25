@@ -2,8 +2,6 @@ package project;
 
 import java.time.Duration;
 import java.util.*;
-import java.util.function.BiFunction;
-import java.util.function.Function;
 import org.openqa.selenium.*;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -29,13 +27,13 @@ public class ApprovedPolicyHolders extends BaseTest {
         viewApplied.click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.pagetitle h1")));
     }
-    @Test(priority = 0)
+    @Test(priority = 25)
     public void validatePageHeaderUi() {
         String expectedTitle = "Approved Policy Holders";
         String actualTitle = driver.findElement(By.cssSelector("div.pagetitle h1")).getText().trim();
         Assert.assertEquals(actualTitle, expectedTitle, "Page title mismatch");
     }
-    @Test(priority = 1)
+    @Test(priority = 26)
     public void validateBreadcrumbUI() {
         String expectedRoot = "Dashboard";              // or "Policy Holders"
         String expectedLeaf = "Approved Policy Holders"; // or "View"
@@ -52,7 +50,7 @@ public class ApprovedPolicyHolders extends BaseTest {
         softly.assertTrue(crumb.isEnabled(), "Breadcrumb root should be clickable");
         softly.assertAll();
     }
-    @Test(priority = 2)
+    @Test(priority = 27)
     public void validateCustomerNameDropdownUI() {
         WebElement label = wait.until(ExpectedConditions.visibilityOfElementLocated(
                 By.xpath("//*[normalize-space(text())='Customer Name']")));
@@ -89,7 +87,7 @@ public class ApprovedPolicyHolders extends BaseTest {
         }
         softly.assertAll();
     }
-    @Test(priority = 3)
+    @Test(priority = 28)
     public void Policy_Status_Filter_UI_Validation() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement button = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#sidebar-nav > li:nth-child(5) > a")));
@@ -110,7 +108,7 @@ public class ApprovedPolicyHolders extends BaseTest {
         System.out.println("The text in the \"Policy Status \" dropdown should be displayed as(--All--)by default");
         System.out.println("=================================================");
     }
-    @Test(priority = 2)
+    @Test(priority = 29)
     public void validateSubCategoryDropdownUI() {
         WebElement label = wait.until(ExpectedConditions.visibilityOfElementLocated(
                 By.xpath("//label[normalize-space()='Sub Category']")));
@@ -147,7 +145,7 @@ public class ApprovedPolicyHolders extends BaseTest {
         }
         softly.assertAll();
     }
-    @Test(priority = 4)
+    @Test(priority = 30)
     public void searchButtonUi() {
         SoftAssert softAssert = new SoftAssert();
 
@@ -158,7 +156,7 @@ public class ApprovedPolicyHolders extends BaseTest {
         softAssert.assertTrue(searchButton.isDisplayed(),"Search button is not enabled");
         softAssert.assertTrue(searchButton.isEnabled(),"Search button is not clickable");
     }
-    @Test(priority = 5)
+    @Test(priority = 31)
     public void resetButtonUi() {
         SoftAssert softAssert = new SoftAssert();
 
@@ -169,7 +167,7 @@ public class ApprovedPolicyHolders extends BaseTest {
         softAssert.assertTrue(resetButton.isDisplayed(),"Reset button is not enabled");
         softAssert.assertTrue(resetButton.isEnabled(),"Reset button is not clickable");
     }
-    @Test(priority = 6)
+    @Test(priority = 32)
     public void validateTableHeadersUI() {
         String[] expected = {
                 "Customer Name",
@@ -205,7 +203,7 @@ public class ApprovedPolicyHolders extends BaseTest {
             actual.add(txt);}
         Assert.assertEquals(actual, Arrays.asList(expected), "Header row mismatch");
     }
-    @Test(priority = 9)
+    @Test(priority = 32)
     public void paginationNumberValidationUI() {
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         String expTxt = "5";
@@ -227,7 +225,7 @@ public class ApprovedPolicyHolders extends BaseTest {
         Assert.assertEquals(actTxt, expTxt,"Pagination failed! The active page number is incorrect.");
     }
 
-    @Test(priority = 10)
+    @Test(priority = 33)
     public void Previous_Button_UI_Validation() {
         By prevBtn = By.xpath("//a[normalize-space()='Previous']");
         List<WebElement> list = driver.findElements(prevBtn);
@@ -243,7 +241,7 @@ public class ApprovedPolicyHolders extends BaseTest {
             Assert.fail("Previous button is present but NOT clickable: " + e.getMessage());
         }
     }
-    @Test(priority = 11)
+    @Test(priority = 34)
     public void Next_Button_UI_Validation(){
         By prevBtn = By.xpath("//a[normalize-space()='Next']");
         List<WebElement> list = driver.findElements(prevBtn);
@@ -259,7 +257,7 @@ public class ApprovedPolicyHolders extends BaseTest {
             Assert.fail("Next button is present but NOT clickable: " + e.getMessage());
         }
     }
-    @Test(priority = 12)
+    @Test(priority = 35)
     public void scrollUpButtonUI() {
         SoftAssert softAssert= new SoftAssert();
 
@@ -271,7 +269,7 @@ public class ApprovedPolicyHolders extends BaseTest {
         softAssert.assertTrue(scrollBtn.isDisplayed(), "Scroll up button is not visible!");
     }
 
-    @Test(priority = 13)
+    @Test(priority = 36)
     public void validateHeaderandBreadcrumbFunctionality() {
         String expectedRoot = "Dashboard";
         String b1 = driver.findElement(By.cssSelector("ol.breadcrumb li:nth-child(1) a")).getText().trim();
@@ -288,7 +286,7 @@ public class ApprovedPolicyHolders extends BaseTest {
         softly.assertAll();
 
     }
-    @Test(priority =14)
+    @Test(priority =37)
     public void validateCustomerNameDropdownFunctionality() {
         WebElement customerDropdown = wait.until(
                 ExpectedConditions.visibilityOfElementLocated(By.id("ContentPlaceHolder_Admin_ddlCustomerName"))
@@ -308,7 +306,7 @@ public class ApprovedPolicyHolders extends BaseTest {
         Assert.assertNotNull(valueAttr, "Dropdown 'value' attribute should not be null after selecting a customer.");
         System.out.println("Customer dropdown validated. Selected: " + selectedName + " (value=" + valueAttr + ")");
     }
-    @Test(priority = 15)
+    @Test(priority = 38)
     public void validatePolicyNameDropdownFunctionality() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(12));
         By select2Container = By.id("select2-ContentPlaceHolder_Admin_ddlPolicyName-container");
@@ -342,7 +340,7 @@ public class ApprovedPolicyHolders extends BaseTest {
         );
         System.out.println("Policy Name dropdown validated. Selected: " + selectedName + " (value=" + valueAttr + ")");
     }
-    @Test(priority = 15)
+    @Test(priority = 39)
     public void vaidateSubCategoryDropdownFunctionality() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(12));
         By select2Container = By.id("select2-ContentPlaceHolder_Admin_ddlSubCategory-container");
@@ -376,7 +374,7 @@ public class ApprovedPolicyHolders extends BaseTest {
         );
         System.out.println("Sub Category dropdown validated. Selected: " + selectedName + " (value=" + valueAttr + ")");
     }
-    @Test()
+    @Test(priority = 40)
     public void Search_Button_Functionality_Validation(){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement customer_name1=driver.findElement(By.xpath("//div[@class='col-md-3']/descendant::span"));
@@ -395,7 +393,7 @@ public class ApprovedPolicyHolders extends BaseTest {
 
     }
 
-    @Test(priority = 17)
+    @Test(priority = 41)
     public void resetbutton() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
@@ -476,7 +474,7 @@ public class ApprovedPolicyHolders extends BaseTest {
     }
 
 
-    @Test(priority = 21)
+    @Test(priority = 42)
     public void paginationNumberValidationFunctionality() {
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         String expTxt = "3";
@@ -491,7 +489,7 @@ public class ApprovedPolicyHolders extends BaseTest {
         String actTxt = activePageSpan.getText();
         Assert.assertEquals(actTxt, expTxt,"Pagination failed! The active page number is incorrect.");
     }
-    @Test(priority = 22)
+    @Test(priority = 43)
     public void Previous_Button_Functionality_Validation() {
         By prevBtn = By.xpath("//a[normalize-space()='Previous']");
         List<WebElement> list = driver.findElements(prevBtn);
@@ -507,7 +505,7 @@ public class ApprovedPolicyHolders extends BaseTest {
             Assert.fail("Previous button is present but NOT clickable: " + e.getMessage());
         }
     }
-    @Test(priority = 23)
+    @Test(priority = 44)
     public void Next_Button_Functionality_Validation(){
         By nextBtn = By.xpath("//a[normalize-space()='Next']");
         List<WebElement> list = driver.findElements(nextBtn);
@@ -527,7 +525,7 @@ public class ApprovedPolicyHolders extends BaseTest {
 
     private final By scrollUpBtn = By.cssSelector("a#scrollUp, a.back-to-top, a[href='#top']");
 
-    @Test(priority = 24)
+    @Test(priority = 46)
     public void ScrollUpbuttonFunctionalityValidation() {
         js.executeScript("window.scrollTo(0, 0);");
         wait.until(ExpectedConditions.invisibilityOfElementLocated(scrollUpBtn));

@@ -1,8 +1,6 @@
 package project;
 import java.time.Duration;
 import java.util.*;
-import java.util.function.BiFunction;
-import java.util.function.Function;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -323,8 +321,6 @@ public class AppliedPolicyHolders extends BaseTest {
     @Test
     public void reset_button_functionality() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
-
         WebElement button = wait.until(ExpectedConditions.elementToBeClickable(
                 By.cssSelector("#sidebar-nav > li:nth-child(5) > a")
         ));
@@ -334,22 +330,12 @@ public class AppliedPolicyHolders extends BaseTest {
         ));
         viewApplied.click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.pagetitle h1")));
-        // Locators
-        //  By menuPolicies = By.xpath("//ul[@id='sidebar-nav']/child::li[5]/a");
-        // By menuAppliedPolicyHolders = By.xpath("//ul[@id='sidebar-nav']/child::li[5]/a/following-sibling::ul/li[2]/a");
-
         By customerNameContainer = By.xpath("//div[@class='col-md-3']/descendant::span"); // Select2 display span (adjust if needed)
         By policyStatus   = By.id("select2-ContentPlaceHolder_Admin_ddlPolicyStatus-container");
-
-
         By resetBtn = By.id("ContentPlaceHolder_Admin_btnReset");
-
-
         wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#sidebar-nav > li:nth-child(5) > a"))).click();
         wait.until(ExpectedConditions.elementToBeClickable(
                 By.cssSelector("#policyHolder-nav > li:nth-child(1) > a > span"))).click();
-
-
         WebElement customerDisplay = wait.until(ExpectedConditions.elementToBeClickable(customerNameContainer));
         customerDisplay.click();
 
@@ -367,22 +353,14 @@ public class AppliedPolicyHolders extends BaseTest {
                 By.xpath("//ul[@class='select2-results__options']//li[3]")));
         policyOption.click();
         String policyBefore = driver.findElement(policyStatus).getText();
-
-
         System.out.println("Before Reset: " + customerBefore + " | " + policyBefore);
 
         // Click Reset
         wait.until(ExpectedConditions.elementToBeClickable(resetBtn)).click();
-
-
         String expectedCustomerPlaceholder = "-- All --";
         String expectedPolicyPlaceholder   = "-- All --";
-
-
         wait.until(ExpectedConditions.textToBePresentInElementLocated(customerNameContainer, expectedCustomerPlaceholder));
         wait.until(ExpectedConditions.textToBePresentInElementLocated(policyStatus, expectedPolicyPlaceholder));
-
-
 
         String customerAfter = driver.findElement(customerNameContainer).getText();
         String policyAfter   = driver.findElement(policyStatus).getText();
